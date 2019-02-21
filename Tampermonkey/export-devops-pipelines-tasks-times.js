@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         New Userscript
+// @name         Export Azure Devops Pipelines task times
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  try to take over the world!
+// @description  In the builds page it adds a button to download the tasks time in CSV format
 // @author       You
 // @match        https://dev.azure.com/azurecom/ACOM/_build/results*
 // @grant        none

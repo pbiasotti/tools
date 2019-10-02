@@ -5,6 +5,7 @@
 // @description  Open preview For EOD
 // @match      https://dev.azure.com/azurecom/*/_workitems/edit/*
 // @copyright  Pablo Biasotti
+// @author     pbiasotti
 // @require http://code.jquery.com/jquery-latest.js
 // @grant        GM_setClipboard
 // @grant        GM_addStyle

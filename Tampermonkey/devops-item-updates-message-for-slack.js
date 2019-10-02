@@ -1,14 +1,11 @@
 // ==UserScript==
-// @name       Devops Item - Copy updates message for Slack thread
-// @namespace  http://tampermonkey.net/
-// @version    0.3
-// @description  Open preview For EOD
-// @match      https://dev.azure.com/azurecom/*/_workitems/edit/*
-// @copyright  Pablo Biasotti
-// @author     pbiasotti
-// @require http://code.jquery.com/jquery-latest.js
+// @name         Copy JIRA Sprint to clipboard
+// @namespace    http://tampermonkey.net/
+// @version      0.1.5
+// @description  Copy JIRA sprint issues to the clipboard (as HTML)
+// @author       jfatta, litodam
+// @match        https://azurecom.atlassian.net/secure/RapidBoard.jspa*
 // @grant        GM_setClipboard
-// @grant        GM_addStyle
 // ==/UserScript==
 
 (function() {

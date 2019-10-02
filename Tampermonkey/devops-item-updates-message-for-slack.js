@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       Devops Item - Copy updates message for Slack thread
-// @namespace  devops
+// @namespace  http://tampermonkey.net/
 // @version    0.3
 // @description  Open preview For EOD
 // @match      https://dev.azure.com/azurecom/*/_workitems/edit/*

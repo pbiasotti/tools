@@ -14,22 +14,26 @@
 (function() {
     'use strict';
 
+    var highPriorityLevels = ["high", "urgent", "hotfix", "next"];
+
     setTimeout(function() {
-        // Get the priority level
-        var itemPriorityLevel = $('#witc_20 input').val();
-
-        // Build the slack message
-        var priorityIcon = ':icrnormal:';
-
-        if (itemPriorityLevel !== 'Low' && itemPriorityLevel !== 'Normal')
-        {
-            priorityIcon = ':icrhigh:'
-        }
-
         $('.work-item-form-header-controls-container')
             .append('<button id="slackButton">Copy For Slack</button>');
 
-        $('#slackButton').click(function () { GM_setClipboard(priorityIcon + " @here Updates on `" + document.title + "`\n" + window.location , 'text'); });
+        $('#slackButton').click(function () {
+            // Get the priority level
+            var itemPriorityLevel = $('label').filter( function (i) { return $(this).html().toLowerCase() === 'priority level'}).parent().next().find('input').val();
+
+            // Build the slack message
+            var priorityIcon = ':icrnormal:';
+
+            if (highPriorityLevels.includes(itemPriorityLevel.toLowerCase()))
+            {
+                priorityIcon = ':icrhigh:'
+            }
+
+            GM_setClipboard(priorityIcon + " @here Updates on `" + document.title + "`\n" + window.location , 'text');
+        });
     }, 2000);
 })();
 

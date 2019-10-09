@@ -32,7 +32,7 @@
                 priorityIcon = ':icrhigh:'
             }
 
-            GM_setClipboard(priorityIcon + " @here Updates on `" + document.title + "`\n" + window.location , 'text');
+            GM_setClipboard(priorityIcon + " @here Updates on `" + document.title + "`\n" + window.location.replace(" - Boards", "") , 'text');
         });
     }, 2000);
 })();

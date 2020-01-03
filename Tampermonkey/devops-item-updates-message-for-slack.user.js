@@ -14,7 +14,7 @@
 (function() {
     'use strict';
 
-    var highPriorityLevels = ["high", "urgent", "hotfix", "next"];
+    var highPriorityLevels = ["high", "4 - high", "urgent", "3 - urgent", "hotfix", "0 - hotfix", "next", "1 - next"];
 
     setTimeout(function() {
         $('.work-item-form-header-controls-container')
@@ -32,7 +32,7 @@
                 priorityIcon = ':icrhigh:'
             }
 
-            GM_setClipboard(priorityIcon + " @here Updates on `" + document.title + "`\n" + window.location , 'text');
+            GM_setClipboard(priorityIcon + " @here Updates on `" + document.title.replace(" - Boards", "") + "`\n" + window.location, 'text');
         });
     }, 2000);
 })();
